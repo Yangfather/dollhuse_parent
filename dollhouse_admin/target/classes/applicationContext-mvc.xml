@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd	
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/websocket 
+		http://www.springframework.org/schema/websocket/spring-websocket.xsd">
+	
+	<mvc:annotation-driven />	
+	<mvc:default-servlet-handler />
+	
+	<context:component-scan base-package="com.dollhouse.admin.controller">
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service" /> 
+	</context:component-scan>
+    <context:component-scan base-package="com.dollhouse.admin.interceptor"/>
+    
+	<mvc:resources mapping="/assets/**" location="/,/assets/" />
+	
+	<mvc:interceptors>
+		<bean class="com.dollhouse.admin.interceptor.AdminLoginHandlerInterceptor"/>
+	</mvc:interceptors>
+	<bean id="myHandler" class="com.dollhouse.core.interceptor.WebsocketEndPoint"></bean>
+    <websocket:handlers allowed-origins="*">
+        <websocket:mapping path="/myHandler" handler="myHandler"/>
+        <websocket:handshake-interceptors>
+            <bean class="com.dollhouse.core.interceptor.HandshakeInterceptor"/>
+        </websocket:handshake-interceptors>
+    </websocket:handlers>
+
+    <websocket:handlers allowed-origins="*">
+        <websocket:mapping path="/sockjs/myHandler" handler="myHandler"/>
+        <websocket:sockjs/>
+    </websocket:handlers>
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<!-- I18N -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	    <property name="basenames">
+	    	<list>
+	    		<value>message</value>
+	    	</list> 
+	    </property> 
+	    <property name="useCodeAsDefaultMessage" value="true" />           
+	</bean>
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+	</mvc:interceptors>
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+	
+	<bean id="messageConverter" class="org.springframework.http.converter.json.GsonHttpMessageConverter"/>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">   
+		<property name="maxUploadSize">    
+        	<value>104857600</value>
+        </property>
+        <property name="maxInMemorySize">
+        	<value>4096</value>
+        </property>
+        <property name="defaultEncoding">
+        	<value>UTF-8</value>
+        </property> 
+	</bean>
+</beans>

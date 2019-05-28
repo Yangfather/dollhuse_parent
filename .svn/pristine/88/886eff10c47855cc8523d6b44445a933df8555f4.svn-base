@@ -1,0 +1,31 @@
+pic-container{
+	width: 100%;
+	min-height: 600px;
+}
+.pic-list{
+	width: 300px;
+	height: 300px;
+	margin: 20px;
+	float: left;
+	border-bottom: 1px solid #E8E8E8;
+	background-color:#FAFAD2;
+}
+.pic-id{
+	display: none;
+	
+}
+.pic-url{
+	width: 290px;
+	margin-left: 5px;
+	height: 240px;
+}
+.pic-name{
+	font:16px bolder;
+	margin-left: 50%;
+}
+.pic-btn{
+	font:16px bolder;
+	width:70px;
+	margin-left: 115px;
+	margin-top:20px;
+}

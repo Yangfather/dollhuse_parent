@@ -1,0 +1,27 @@
+.name-change{
+	width: 90%;
+	margin-left: 5%;
+	border-top:1px solid orange;
+	margin-top: 40px;
+}
+
+.password-change{
+	width: 90%;
+	margin-left: 5%;
+	border-top:1px solid orange;
+}
+
+.email-change{
+	width: 90%;
+	margin-left: 5%;
+	border-top:1px solid orange;
+}
+
+.phone-change{
+	width: 90%;
+	margin-left: 5%;
+	border-top:1px solid orange;
+}
+input{
+	margin-top: 20px;
+}

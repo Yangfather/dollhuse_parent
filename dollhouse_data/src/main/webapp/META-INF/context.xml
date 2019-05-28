@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource
+		name="jdbc/dollhouse"
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://118.89.246.13:3306/dollhouse?useUnicode=true&amp;characterEncoding=utf8"
+		username="root"
+		password="yg1337753735"
+		maxActive="20"
+		maxIdle="10"
+		maxWait="10000" />
+</Context>

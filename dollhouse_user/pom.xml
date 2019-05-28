@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.dollhouse</groupId>
+    <artifactId>dollhouse_parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>dollhouse_user</artifactId>
+  <packaging>war</packaging>
+ 
+ <dependencies>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_comm</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_core</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_entity</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_service</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+		<dependency>
+		    <groupId>javax</groupId>
+		    <artifactId>javaee-api</artifactId>
+		    <version>7.0</version>
+		    <scope>provided</scope>
+		</dependency>
+		<!-- JSONObject依赖 -->
+			<!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
+			<dependency>
+			    <groupId>net.sf.json-lib</groupId>
+			    <artifactId>json-lib</artifactId>
+			    <version>2.3</version>
+			    <classifier>jdk15</classifier>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+			<dependency>
+			    <groupId>commons-beanutils</groupId>
+			    <artifactId>commons-beanutils</artifactId>
+			    <version>1.8.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+			<dependency>
+			    <groupId>commons-collections</groupId>
+			    <artifactId>commons-collections</artifactId>
+			    <version>3.2.1</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+			 <dependency>
+			    <groupId>commons-lang</groupId>
+			    <artifactId>commons-lang</artifactId>
+			    <version>2.4</version>
+			</dependency> 
+			<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+			<dependency>
+			    <groupId>commons-logging</groupId>
+			    <artifactId>commons-logging</artifactId>
+			    <version>1.1</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/net.sf.ezmorph/ezmorph -->
+			<dependency>
+			    <groupId>net.sf.ezmorph</groupId>
+			    <artifactId>ezmorph</artifactId>
+			    <version>1.0.6</version>
+			</dependency>
+			<!-- 各种json 配置开始 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20150729</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <!-- 各种json 配置开始 -->
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+			
+	</dependencies>
+</project>

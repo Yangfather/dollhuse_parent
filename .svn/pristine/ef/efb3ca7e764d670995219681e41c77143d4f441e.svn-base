@@ -1,0 +1,6 @@
+jdbc.username=root
+jdbc.password=root
+jdbc.valQuery:SELECT 'x'
+jdbc.driverClass=com.mysql.jdbc.Driver
+#jdbc.url=jdbc:mysql://127.0.0.1:3306/tj_jianguan?useUnicode=true&characterEncoding=utf8
+jdbc.url=jdbc:mysql://127.0.0.1:3306/dollhouse?useUnicode=true&characterEncoding=utf8

@@ -1,0 +1,13 @@
+.main-container{width: 100%;min-height: 400px;}
+.address-container{width: 80%;margin-left: 10%;min-height: 100px;}
+.goodsInfo-container{width: 80%;margin-left: 10%;min-height: 200px;}
+table{background-color: #F5FFFA;width: 100%;}
+table thead{width: 100%;height: 40px;}
+table thead th{border-bottom: 1px solid white;border-right: 1px solid white;min-height: 30px;}
+.goods-name{width: 30%;}
+.goods-type{width: 20%;}
+.goods-price{width:15%; }
+.goods-num{width:20%;}
+.goods-total{width: 15%;}
+table tr td{border-bottom: 1px solid white;border-right: 1px solid white;min-height: 90px;}
+#order-img{width: 15%;height: 90px;}

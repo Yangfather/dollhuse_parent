@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="dollhouse_comm">
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <property name="context-root" value="dollhouse_comm"/>
+        <property name="java-output-path" value="/dollhouse_comm/target/classes"/>
+    </wb-module>
+</project-modules>

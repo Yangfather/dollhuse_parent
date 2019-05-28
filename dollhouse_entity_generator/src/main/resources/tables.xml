@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables package="com.dollhouse.entity.comm" location="..\dollhouse_entity\src\main\java">
+	<table name="doll_name" entityName="DollName"></table>
+	<table name="doll_type" entityName="DollType"></table>
+    <table name="doll_shop_car" entityName="DollShopCar"></table>
+	<table name="user_info" entityName="UserInfo"></table> 
+	<table name="admin_info" entityName="AdminInfo"></table>
+	<table name="doll_menu" entityName="DollMenu"></table>
+	<table name="admin_menu" entityName="AdminMenu"></table>
+	<table name="admin_menu_level" entityName="AdminMenuLevel"></table>
+	 <table name="goods_list" entityName="GoodsList"></table>
+	<table name="money_statistics" entityName="MoneyStatistics"></table>
+	<table name="sale_statistics" entityName="SaleStatistics"></table>
+	<table name="doll_order" entityName="DollOrder"></table>
+	<table name="sys_system_config" entityName="SysSystemConfig"></table> 
+	<table name="doll_star" entityName="DollStar"></table>
+	<table name="chat_session" entityName="ChatSession"></table>
+</tables>

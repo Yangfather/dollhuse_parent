@@ -1,0 +1,82 @@
+<project
+ xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.dollhouse</groupId>
+    <artifactId>dollhouse_parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>dollhouse_admin</artifactId>
+  <packaging>war</packaging>
+  <dependencies>
+		<dependency>
+			<groupId>com.googlecode.libphonenumber</groupId>
+			<artifactId>geocoder</artifactId>
+			<version>2.75</version>
+        </dependency>
+        <dependency>
+		   <groupId>com.googlecode.libphonenumber</groupId>
+		   <artifactId>libphonenumber</artifactId>
+		   <version>8.4.1</version>
+        </dependency>
+        <dependency>
+		   <groupId>com.googlecode.libphonenumber</groupId>
+		   <artifactId>prefixmapper</artifactId>
+		   <version>2.68</version>
+        </dependency>
+        <dependency>
+		   <groupId>com.googlecode.libphonenumber</groupId>
+		   <artifactId>carrier</artifactId>
+		   <version>1.58</version>
+        </dependency>
+	
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_comm</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_core</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_entity</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.dollhouse</groupId>
+			<artifactId>dollhouse_service</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.16</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson  -->
+		<!-- fastjson转化格式 -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.38</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+		    <groupId>org.jsoup</groupId>
+		    <artifactId>jsoup</artifactId>
+		    <version>1.8.3</version>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dollhouse.baf.mapper.GeneratorMapper">
+	<resultMap id="TableResultMap" type="com.dollhouse.baf.entity.Table">
+		<result column="table_name" property="tableName" javaType="java.lang.String" />
+		<result column="table_comment" property="tableComment" javaType="java.lang.String" />
+	</resultMap>
+	
+	<resultMap id="ColumnResultMap" type="com.dollhouse.baf.entity.Column">
+		<result column="table_name" property="tableName" javaType="java.lang.String" />
+		<result column="column_name" property="columnName" javaType="java.lang.String" />
+		<result column="column_comment" property="columnComment" javaType="java.lang.String" />
+		<result column="data_type" property="dataType" javaType="java.lang.String" />
+		<result column="numeric_precision" property="numericPrecision" javaType="java.lang.Integer" />
+		<result column="numeric_scale" property="numericScale" javaType="java.lang.Integer" />
+		<result column="extra" property="extra" javaType="java.lang.String" />
+		<result column="column_type" property="columnType" javaType="java.lang.String" />
+	</resultMap>
+	
+	<select id="getTables" resultMap="TableResultMap">
+        select table_name, table_comment
+        from information_schema.tables
+        where table_schema = schema()
+        <if test="tableName != null">
+        	and table_name like concat(#{tableName}, '%')
+        </if>
+    </select>
+	
+    <select id="getTableColumns" parameterType="java.lang.String" resultMap="ColumnResultMap">
+        select 
+        	table_name, column_name, column_comment, data_type, numeric_precision, numeric_scale, extra, column_type
+        from information_schema.columns
+        where table_schema = schema()
+        	and table_name = #{tableName}
+    </select>
+</mapper>

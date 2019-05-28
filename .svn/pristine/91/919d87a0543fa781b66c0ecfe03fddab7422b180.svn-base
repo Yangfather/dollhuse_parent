@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="dollhouse_admin">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <dependent-module archiveName="dollhouse_comm-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dollhouse_comm/dollhouse_comm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dollhouse_core-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dollhouse_core/dollhouse_core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dollhouse_entity-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dollhouse_entity/dollhouse_entity">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dollhouse_service-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dollhouse_service/dollhouse_service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="dollhouse_admin"/>
+        <property name="java-output-path" value="/dollhouse_admin/target/classes"/>
+    </wb-module>
+</project-modules>

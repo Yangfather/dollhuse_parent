@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dollhouse.mapper.GoodsInfoMapper">
+<resultMap id="platformBiz" type="com.dollhouse.entity.comm.DollName"></resultMap>
+<resultMap type="com.dollhouse.entity.comm.DollShopCar" id="dollShopCar"></resultMap>
+<!--  resultType返回数据类型 ,id调用该sql的方法  -->
+	<select id="getGoodsById"  resultType="java.util.Map">
+		SELECT * from doll_type LEFT JOIN	doll_name  ON doll_type.doll_name_id=doll_name.id WHERE  doll_name_id=#{doll_name_id}
+	</select>
+	
+	<select id="getGoodsListByType"  resultType="java.util.Map">
+		SELECT * from doll_name WHERE  doll_type=#{doll_type}
+	</select>
+	<select id="starGoods" resultType="java.util.Map">
+		SELECT *, SUM(doll_num) FROM doll_shop_car GROUP BY doll_organcode DESC  LIMIT 10
+	</select>
+	<select id="areaSaleMap" resultType="java.util.Map">
+		 SELECT
+		 receive_address_province as name,
+		 COUNT(receive_address_province) as value
+		 from
+		 doll_order
+		 GROUP BY
+		 receive_address_province
+		 ORDER BY
+		 value
+		 DESC
+	</select>
+	<select id="moneyDay" resultType="java.util.Map">
+		 SELECT
+		 sum(doll_total) as name
+		 from
+		 doll_order
+		 WHERE 
+		 buy_time
+		 BETWEEN #{startTime}
+		 AND
+		 #{endTIme}
+	
+	</select>
+</mapper>

@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/*
+@decription: 平台分析样式
+@auther: xihun
+@create date: 2016-05-20;
+@version: v1.0
+*/
+.page-loan .bd {
+  padding: 0;
+  background: none;
+}
+
+.chart-wrap {
+  min-height: 500px;
+}
+.chart-wrap .item {
+  padding: 30px 20px;
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+}
+.chart-wrap .item-left {
+  float: left;
+  width: 610px;
+  border-right: 1px solid #d7d7d7;
+}
+.chart-wrap .item-hd {
+  margin-bottom: 20px;
+}
+.chart-wrap .item-hd .pic {
+  float: left;
+  width: 100px;
+  height: 86px;
+  border: 1px solid #ebebeb;
+}
+.chart-wrap .item-hd .info-con {
+  padding-top: 1px;
+}
+.chart-wrap .item-hd .name {
+  font-size: 24px;
+  color: #000;
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+.chart-wrap .item-hd .name a {
+  color: #000;
+}
+.chart-wrap .item-hd .rate-box .txt, .chart-wrap .item-hd .rate-box .rate-bg, .chart-wrap .item-hd .rate-box .rate-txt {
+  display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1;
+}
+.chart-wrap .item-hd .rate-box .txt {
+  font-size: 12px;
+  color: #999;
+}
+.chart-wrap .item-hd .rate-box .rate-bg {
+  width: 386px;
+  height: 6px;
+  margin-left: 4px;
+  background: #ccc;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+}
+.chart-wrap .item-hd .rate-box .rate {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 6px;
+  border-radius: 4px;
+}
+.chart-wrap .item-hd .rate-box .rate-txt {
+  font-size: 12px;
+  margin-left: 4px;
+}
+.chart-wrap .item-hd .high-rate .rate {
+  background: #f00;
+}
+.chart-wrap .item-hd .high-rate .rate-txt {
+  color: #f00;
+}
+.chart-wrap .item-hd .middle-rate .rate {
+  background: #ff9600;
+}
+.chart-wrap .item-hd .middle-rate .rate-txt {
+  color: #ff9600;
+}
+.chart-wrap .item-hd .low-rate .rate {
+  background: #46c823;
+}
+.chart-wrap .item-hd .low-rate .rate-txt {
+  color: #46c823;
+}
+.chart-wrap .col {
+  margin-bottom: 10px;
+  font-size: 0;
+}
+.chart-wrap .col span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  margin-right: 20px;
+  color: #999;
+}
+.chart-wrap .col span b {
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+}
+.chart-wrap .col .fore1 {
+  width: 40px;
+  height: 40px;
+  padding: 8px 6px 0;
+  text-align: center;
+  color: #0092dd;
+  font-size: 14px;
+  border: 1px solid #0092dd;
+  border-radius: 4px;
+}
+.chart-wrap .col .fore2 {
+  width: 100px;
+}
+.chart-wrap .col .fore3 {
+  width: 100px;
+}
+.chart-wrap .col .fore4 {
+  width: 120px;
+}
+.chart-wrap .col .fore5 {
+  width: 120px;
+}
+.chart-wrap .item-right {
+  float: left;
+  width: 396px;
+  border-left: 1px solid #d7d7d7;
+  margin-left: -1px;
+}
+.chart-wrap .item-right .net-chart {
+  width: 396px;
+  height: 300px;
+}
+.chart-wrap .item-right .highcharts-button {
+  display: none;
+}
+.chart-wrap .evenbg {
+  background: #f6f6f6;
+}
+
+.platform-detail {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.platform-detail .highcharts-button {
+  display: none;
+}
+.platform-detail .panel {
+  display: none;
+  background: #fff;
+  padding: 20px 40px 97px 40px;
+}
+.platform-detail .panel-pd {
+  padding: 0;
+  background: none;
+}
+.platform-detail .panel-show {
+  display: block;
+}
+.platform-detail .company-info {
+  border: 1px solid #eaeaea;
+  background: #fff;
+  box-shadow: 0 0 10px #ececec;
+}
+.platform-detail .company-info .hd-tit {
+  height: 78px;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+.platform-detail .company-info .hd-tit h4 {
+  margin-top: 18px;
+  margin-left: 36px;
+  padding-left: 22px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #666;
+  position: relative;
+}
+.platform-detail .company-info .hd-tit h4:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 24px;
+  background: #0193de;
+  border-radius: 3px;
+}
+.platform-detail .company-info .hd-tit span {
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 6px;
+}
+.platform-detail .company-info .hd-tit .report-btn {
+  position: absolute;
+  right: 20px;
+  top: 22px;
+  width: 106px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #f04848;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2px;
+}
+.platform-detail .company-info .bd-con {
+  background: #fff;
+  padding: 20px 80px;
+}
+.platform-detail .company-info .data-box {
+  float: left;
+  width: 390px;
+}
+.platform-detail .company-info .col {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+.platform-detail .company-info .col .black {
+  font-weight: bold;
+  color: #333;
+}
+.platform-detail .company-info .col .orange {
+  font-weight: bold;
+  color: #f60;
+}
+.platform-detail .company-info .net-chart {
+  float: left;
+  width: 430px;
+  height: 300px;
+}
+.platform-detail .chart-data {
+  margin-top: 16px;
+}
+.platform-detail .chart-data .tab-group {
+  padding-left: 24px;
+  border-bottom: 2px solid #0697da;
+}
+.platform-detail .chart-data .tab-group li {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  padding: 0 20px;
+  margin-right: 12px;
+  background: #0092dd;
+  border-radius: 4px 4px 0 0;
+  min-width: 80px;
+}
+.platform-detail .chart-data .tab-group li a {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+}
+.platform-detail .chart-data .chart-con {
+  padding: 30px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  box-shadow: 0 0 10px #ececec;
+}
+.platform-detail .chart-data .columnar-chart {
+  float: left;
+  width: 680px;
+  height: 380px;
+}
+.platform-detail .chart-data .curve-chart {
+  float: left;
+  width: 680px;
+  height: 380px;
+}
+.platform-detail .chart-data .target-direct {
+  float: right;
+  width: 214px;
+  margin-top: 50px;
+  border: 1px solid #e2e2e2;
+}
+.platform-detail .chart-data .target-direct h4 {
+  height: 42px;
+  line-height: 42px;
+  font-size: 16px;
+  padding-left: 16px;
+  font-weight: normal;
+  border-bottom: 1px solid #e2e2e2;
+}
+.platform-detail .chart-data .target-direct img {
+  margin-left: 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.platform-detail .chart-data .target-direct p {
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+.platform-detail .chart-data .target-direct .red {
+  color: #f00;
+}
+.platform-detail .chart-data .target-direct .green {
+  color: #56a723;
+}
